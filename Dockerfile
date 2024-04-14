@@ -10,7 +10,7 @@ ADD ./ /go/src/app
 RUN make build
 
 # Run
-FROM alpine:3.10
+FROM alpine:3.16.9
 
 COPY entrypoint.sh /entrypoint.sh
 COPY --from=build /go/src/app/bumper /bumper
